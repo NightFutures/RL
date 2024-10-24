@@ -10,7 +10,8 @@
     "type": "field",
     "outboundTag": "proxy",
     "domain": [
-      "habr.com"
+      "habr.com",
+      "2ip.ru"
     ]
   },
   {
