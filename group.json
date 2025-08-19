@@ -1,17 +1,17 @@
 {
-    "version": 2,
+    "version": 1,
 	"profiles" : [
 	    {
             "name": "1",
             "coreType": "xray",
             "format": "",
-            "coreConfig": `{"routing":{"domainStrategy":"IPOnDemand","rules":[{"outboundTag":"direct","protocol":["bittorrent"],"type":"field"},{"domain":["domain:habr.com","domain:stream.voidboost.cc","domain:jut.su","domain:yandexwebcache.org","domain:animejoy.ru"],"outboundTag":"proxy","type":"field"},{"domain":["geosite:category-ru","domain:2ip.io","domain:cdn.adfinity.pro","domain:clstorage.net","domain:livejournal.com","domain:mradx.net","domain:smailru.net","domain:static-storage.net","domain:vk.team","domain:vkuser.net","domain:vkuseraudio.net","domain:naydex.net","domain:timeweb.cloud","domain:yandexwebcache.org","domain:remanga.org","domain:reimg.org","domain:reimg2.org","domain:secvideo1.online","domain:csst.online","domain:novel.tl"],"outboundTag":"direct","type":"field"},{"ip":["geoip:ru"],"outboundTag":"direct","type":"field"},{"outboundTag":"proxy","port":"0-65535","type":"field"}]}}`
+            "coreConfig": "{\"routing\":{\"domainStrategy\":\"IPOnDemand\",\"rules\":[{\"outboundTag\":\"direct\",\"protocol\":[\"bittorrent\"],\"type\":\"field\"},{\"domain\":[\"domain:habr.com\",\"domain:stream.voidboost.cc\",\"domain:jut.su\",\"domain:yandexwebcache.org\",\"domain:animejoy.ru\"],\"outboundTag\":\"proxy\",\"type\":\"field\"},{\"domain\":[\"geosite:category-ru\",\"domain:2ip.io\",\"domain:cdn.adfinity.pro\",\"domain:clstorage.net\",\"domain:livejournal.com\",\"domain:mradx.net\",\"domain:smailru.net\",\"domain:static-storage.net\",\"domain:vk.team\",\"domain:vkuser.net\",\"domain:vkuseraudio.net\",\"domain:naydex.net\",\"domain:timeweb.cloud\",\"domain:yandexwebcache.org\",\"domain:remanga.org\",\"domain:reimg.org\",\"domain:reimg2.org\",\"domain:secvideo1.online\",\"domain:csst.online\",\"domain:novel.tl\"],\"outboundTag\":\"direct\",\"type\":\"field\"},{\"ip\":[\"geoip:ru\"],\"outboundTag\":\"direct\",\"type\":\"field\"},{\"outboundTag\":\"proxy\",\"port\":\"0-65535\",\"type\":\"field\"}]}}"
 		},
 	    {
             "name": "2",
             "coreType": "xray",
             "format": "",
-            "coreConfig": `{"dns":{"disableFallback":true,"servers":[{"address":"8.8.8.8","queryStrategy":"ForceIPv4"},{"address":"8.8.8.8","domains":["domain:jut.su","domain:yandexwebcache.org","domain:animejoy.ru"],"queryStrategy":"ForceIPv4"},{"address":"localhost","domains":["geosite:category-ru","geosite:private","domain:nyan-storage.site","domain:2ip.io","domain:cdn.adfinity.pro","domain:clstorage.net","domain:livejournal.com","domain:mangalib.me","domain:mradx.net","domain:ranobelib.me","domain:shikimori.one","domain:smailru.net","domain:static-storage.net","domain:vk.team","domain:vkuser.net","domain:vkuseraudio.net","domain:naydex.net","domain:animego.org","domain:timeweb.cloud","domain:yandexwebcache.org","domain:secvideo1.online","domain:csst.online"],"queryStrategy":"ForceIPv4"}]}}`
+            "coreConfig": "{\"dns\":{\"disableFallback\":true,\"servers\":[{\"address\":\"8.8.8.8\",\"queryStrategy\":\"ForceIPv4\"},{\"address\":\"8.8.8.8\",\"domains\":[\"domain:jut.su\",\"domain:yandexwebcache.org\",\"domain:animejoy.ru\"],\"queryStrategy\":\"ForceIPv4\"},{\"address\":\"localhost\",\"domains\":[\"geosite:category-ru\",\"geosite:private\",\"domain:nyan-storage.site\",\"domain:2ip.io\",\"domain:cdn.adfinity.pro\",\"domain:clstorage.net\",\"domain:livejournal.com\",\"domain:mangalib.me\",\"domain:mradx.net\",\"domain:ranobelib.me\",\"domain:shikimori.one\",\"domain:smailru.net\",\"domain:static-storage.net\",\"domain:vk.team\",\"domain:vkuser.net\",\"domain:vkuseraudio.net\",\"domain:naydex.net\",\"domain:animego.org\",\"domain:timeweb.cloud\",\"domain:yandexwebcache.org\",\"domain:secvideo1.online\",\"domain:csst.online\"],\"queryStrategy\":\"ForceIPv4\"}]}}"
 		}
 	]
 }
