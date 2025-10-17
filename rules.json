@@ -43,7 +43,8 @@
             "domain:animego.org",
             "domain:timeweb.cloud",
             "domain:timeweb.com",
-            "domain:roistat.com"
+            "domain:roistat.com",
+            "domain:vk.com"
         ],
         "outboundTag": "direct",
         "ruleTag": "route_non-RU-domain-RU-IP-direct"
