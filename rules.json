@@ -16,20 +16,6 @@
     },
     {
         "domain": [
-            "dns.google"
-        ],
-        "outboundTag": "proxy",
-        "ruleTag": "route_google-dns-domain-proxy"
-    },
-    {
-        "domain": [
-            "one.one.one.one"
-        ],
-        "outboundTag": "proxy",
-        "ruleTag": "route_cloudflare-dns-domain-WARP"
-    },
-    {
-        "domain": [
             "domain:jut.su",
             "domain:animejoy.ru"
         ],
