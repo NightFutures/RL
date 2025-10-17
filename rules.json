@@ -1,6 +1,6 @@
 [
     {
-        "outboundTag": "outbound_direct",
+        "outboundTag": "direct",
         "protocol": [
             "bittorrent"
         ],
@@ -11,21 +11,21 @@
             "geosite:private",
             "domain:dropnyanfiles.org"
         ],
-        "outboundTag": "outbound_direct",
+        "outboundTag": "direct",
         "ruleTag": "route_private-domain-direct"
     },
     {
         "domain": [
             "dns.google"
         ],
-        "outboundTag": "outbound_proxy",
+        "outboundTag": "proxy",
         "ruleTag": "route_google-dns-domain-proxy"
     },
     {
         "domain": [
             "one.one.one.one"
         ],
-        "outboundTag": "outbound_proxy",
+        "outboundTag": "proxy",
         "ruleTag": "route_cloudflare-dns-domain-WARP"
     },
     {
@@ -33,14 +33,14 @@
             "domain:jut.su",
             "domain:animejoy.ru"
         ],
-        "outboundTag": "outbound_proxy",
+        "outboundTag": "proxy",
         "ruleTag": "route_RU-domain-non-RU-IP-proxy"
     },
     {
         "domain": [
             "domain:habr.com"
         ],
-        "outboundTag": "outbound_proxy",
+        "outboundTag": "proxy",
         "ruleTag": "route_non-RU-domain-RU-IP-WARP"
     },
     {
@@ -54,7 +54,7 @@
             "domain:timeweb.com",
             "domain:roistat.com"
         ],
-        "outboundTag": "outbound_direct",
+        "outboundTag": "direct",
         "ruleTag": "route_non-RU-domain-RU-IP-direct"
     },
     {
@@ -63,7 +63,7 @@
             "domain:novel.tl",
             "domain:shikimori.one"
         ],
-        "outboundTag": "outbound_direct",
+        "outboundTag": "direct",
         "ruleTag": "route_non-RU-domain-non-RU-IP-direct"
     },
     {
@@ -71,14 +71,14 @@
             "geosite:category-ru",
             "geosite:cn"
         ],
-        "outboundTag": "outbound_direct",
+        "outboundTag": "direct",
         "ruleTag": "route_RU-CN-domain-direct"
     },
     {
         "ip": [
             "geoip:private"
         ],
-        "outboundTag": "outbound_direct",
+        "outboundTag": "direct",
         "ruleTag": "route_private-IP-direct"
     },
     {
@@ -86,7 +86,7 @@
             "8.8.8.8",
             "8.8.4.4"
         ],
-        "outboundTag": "outbound_proxy",
+        "outboundTag": "proxy",
         "ruleTag": "route_google-dns-IP-proxy"
     },
     {
@@ -94,7 +94,7 @@
             "1.1.1.1",
             "1.0.0.1"
         ],
-        "outboundTag": "outbound_proxy",
+        "outboundTag": "proxy",
         "ruleTag": "route_cloudflare-IP-dns-WARP"
     },
     {
@@ -102,12 +102,12 @@
             "geoip:ru",
             "geoip:cn"
         ],
-        "outboundTag": "outbound_direct",
+        "outboundTag": "direct",
         "ruleTag": "route_RU-CN-IP-direct"
     },
     {
         "network": "tcp,udp",
-        "outboundTag": "outbound_proxy",
+        "outboundTag": "proxy",
         "ruleTag": "route_else-proxy"
     }
 ]
