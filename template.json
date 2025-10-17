@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "routingItems": [
+    {
+      "remarks": "\u0041\u006C\u006C\u0020\u0065\u0078\u0063\u0065\u0070\u0074\u0020\u0052\u0075\u0073\u0073\u0069\u0061\u006E",
+      "domainStrategy": "IPOnDemand",
+      "url": "https://raw.githubusercontent.com/NightFutures/RL/refs/heads/main/rules.json"
+    }
+  ]
+}
