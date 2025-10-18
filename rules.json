@@ -1,112 +1,126 @@
-[
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u0062\u0069\u0074\u0074\u006F\u0072\u0065\u006E\u0074\u002D\u0064\u0069\u0072\u0065\u0063\u0074",
-        "outboundTag": "direct",
-        "protocol": [
-            "bittorrent"
-        ],
-        "ruleTag": "route_bittorent-direct"
+{
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns_domain-proxy",
+                "address": "dns.google",
+                "domains": [
+                    "domain:jut.su",
+                    "domain:animejoy.ru"
+                ],
+                "skipFallback": true
+            },
+            {
+                "tag": "dns_domain-WARP",
+                "address": "one.one.one.one",
+                "domains": [
+                    "domain:habr.com",
+                    "domain:2ip.ru",
+                    "domain:2ip.io",
+                    "domain:shikimori.one"
+                ],
+                "skipFallback": true
+            },
+            {
+                "tag": "dns_domain-direct",
+                "address": "localhost",
+                "domains": [
+                    "domain:cdn.adfinity.pro",
+                    "domain:livejournal.com",
+                    "domain:ranobelib.me",
+                    "domain:static-storage.net",
+                    "domain:animego.org",
+                    "domain:timeweb.cloud",
+                    "domain:timeweb.com",
+                    "domain:roistat.com",
+                    "domain:secvideo1.online",
+                    "domain:novel.tl"
+                ],
+                "skipFallback": true
+            },
+            {
+                "tag": "dns_geosite-direct",
+                "address": "localhost",
+                "domains": [
+                    "geosite:private",
+                    "geosite:category-ru",
+                    "geosite:cn"
+                ],
+                "skipFallback": true
+            },
+            {
+                "tag": "dns_else-proxy",
+                "address": "dns.google",
+                "skipFallback": false
+            }
+        ]
     },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u0070\u0072\u0069\u0076\u0061\u0074\u0065\u002D\u0064\u006F\u006D\u0061\u0069\u006E\u002D\u0064\u0069\u0072\u0065\u0063\u0074",
-        "domain": [
-            "geosite:private",
-            "domain:dropnyanfiles.org"
-        ],
-        "outboundTag": "direct",
-        "ruleTag": "route_private-domain-direct"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u0052\u0055\u002D\u0064\u006F\u006D\u0061\u0069\u006E\u002D\u006E\u006F\u006E\u002D\u0052\u0055\u002D\u0049\u0050\u002D\u0070\u0072\u006F\u0078\u0079",
-        "domain": [
-            "domain:jut.su",
-            "domain:animejoy.ru"
-        ],
-        "outboundTag": "proxy",
-        "ruleTag": "route_RU-domain-non-RU-IP-proxy"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u006E\u006F\u006E\u002D\u0052\u0055\u002D\u0064\u006F\u006D\u0061\u0069\u006E\u002D\u0052\u0055\u002D\u0049\u0050\u002D\u0057\u0041\u0052\u0050",
-        "domain": [
-            "domain:habr.com"
-        ],
-        "outboundTag": "proxy",
-        "ruleTag": "route_non-RU-domain-RU-IP-WARP"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u006E\u006F\u006E\u002D\u0052\u0055\u002D\u0064\u006F\u006D\u0061\u0069\u006E\u002D\u0052\u0055\u002D\u0049\u0050\u002D\u0064\u0069\u0072\u0065\u0063\u0074",
-        "domain": [
-            "domain:cdn.adfinity.pro",
-            "domain:livejournal.com",
-            "domain:ranobelib.me",
-            "domain:static-storage.net",
-            "domain:animego.org",
-            "domain:timeweb.cloud",
-            "domain:timeweb.com",
-            "domain:roistat.com",
-            "domain:vk.com"
-        ],
-        "outboundTag": "direct",
-        "ruleTag": "route_non-RU-domain-RU-IP-direct"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u006E\u006F\u006E\u002D\u0052\u0055\u002D\u0064\u006F\u006D\u0061\u0069\u006E\u002D\u006E\u006F\u006E\u002D\u0052\u0055\u002D\u0049\u0050\u002D\u0064\u0069\u0072\u0065\u0063\u0074",
-        "domain": [
-            "domain:secvideo1.online",
-            "domain:novel.tl",
-            "domain:shikimori.one"
-        ],
-        "outboundTag": "direct",
-        "ruleTag": "route_non-RU-domain-non-RU-IP-direct"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u0052\u0055\u002D\u0043\u004E\u002D\u0064\u006F\u006D\u0061\u0069\u006E\u002D\u0064\u0069\u0072\u0065\u0063\u0074",
-        "domain": [
-            "geosite:category-ru",
-            "geosite:cn"
-        ],
-        "outboundTag": "direct",
-        "ruleTag": "route_RU-CN-domain-direct"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u0070\u0072\u0069\u0076\u0061\u0074\u0065\u002D\u0049\u0050\u002D\u0064\u0069\u0072\u0065\u0063\u0074",
-        "ip": [
-            "geoip:private"
-        ],
-        "outboundTag": "direct",
-        "ruleTag": "route_private-IP-direct"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u0067\u006F\u006F\u0067\u006C\u0065\u002D\u0064\u006E\u0073\u002D\u0049\u0050\u002D\u0070\u0072\u006F\u0078\u0079",
-        "ip": [
-            "8.8.8.8",
-            "8.8.4.4"
-        ],
-        "outboundTag": "proxy",
-        "ruleTag": "route_google-dns-IP-proxy"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u0063\u006C\u006F\u0075\u0064\u0066\u006C\u0061\u0072\u0065\u002D\u0049\u0050\u002D\u0064\u006E\u0073\u002D\u0057\u0041\u0052\u0050",
-        "ip": [
-            "1.1.1.1",
-            "1.0.0.1"
-        ],
-        "outboundTag": "proxy",
-        "ruleTag": "route_cloudflare-IP-dns-WARP"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u0052\u0055\u002D\u0043\u004E\u002D\u0049\u0050\u002D\u0064\u0069\u0072\u0065\u0063\u0074",
-        "ip": [
-            "geoip:ru",
-            "geoip:cn"
-        ],
-        "outboundTag": "direct",
-        "ruleTag": "route_RU-CN-IP-direct"
-    },
-    {
-        "remarks": "\u0072\u006F\u0075\u0074\u0065\u005F\u0065\u006C\u0073\u0065\u002D\u0070\u0072\u006F\u0078\u0079",
-        "network": "tcp,udp",
-        "outboundTag": "proxy",
-        "ruleTag": "route_else-proxy"
+    "routing": {
+        "rules": [
+            {
+                "domain": [
+                    "domain:jut.su",
+                    "domain:animejoy.ru"
+                ],
+                "outboundTag": "outbound_proxy",
+                "ruleTag": "route_domain-proxy"
+            },
+            {
+                "domain": [
+                    "domain:habr.com",
+                    "domain:2ip.ru",
+                    "domain:2ip.io",
+                    "domain:shikimori.one"
+                ],
+                "outboundTag": "outbound_proxy",
+                "ruleTag": "route_domain-WARP"
+            },
+            {
+                "protocol": [
+                    "bittorrent"
+                ],
+                "outboundTag": "outbound_direct",
+                "ruleTag": "route_protocol-direct"
+            },
+            {
+                "domain": [
+                    "domain:cdn.adfinity.pro",
+                    "domain:livejournal.com",
+                    "domain:ranobelib.me",
+                    "domain:static-storage.net",
+                    "domain:animego.org",
+                    "domain:timeweb.cloud",
+                    "domain:timeweb.com",
+                    "domain:roistat.com",
+                    "domain:secvideo1.online",
+                    "domain:novel.tl"
+                ],
+                "outboundTag": "outbound_direct",
+                "ruleTag": "route_domain-direct"
+            },
+            {
+                "domain": [
+                    "geosite:private",
+                    "geosite:category-ru",
+                    "geosite:cn"
+                ],
+                "outboundTag": "outbound_direct",
+                "ruleTag": "route_geosite-direct"
+            },
+            {
+                "ip": [
+                    "geoip:private",
+                    "geoip:ru",
+                    "geoip:cn"
+                ],
+                "outboundTag": "outbound_direct",
+                "ruleTag": "route_geoip-direct"
+            },
+            {
+                "network": "tcp,udp",
+                "outboundTag": "outbound_proxy",
+                "ruleTag": "route_else-proxy"
+            }
+        ]
     }
-]
+}
